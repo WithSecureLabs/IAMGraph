@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "iamgraph"
+version = "0.1.0"
+description = "Tool to model AWS IAM relationships to Neo4j graph database"
+authors = ["Aleksi Kallio <aleksi.kallio@withsecure.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+neo4j = "^5.15.0"
+click = "^8.1.7"
+iamspy = {git = "https://github.com/WithSecureLabs/IAMSpy.git"}
+
+[tool.poetry.scripts]
+iamgraph = "iamgraph.cli:cli"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
